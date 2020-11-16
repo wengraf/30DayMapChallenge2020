@@ -9,9 +9,7 @@ st_crs(important.sf) = 27700
 important.sf <- st_zm(important.sf)
 important.sf$featureCode <- NULL
 
-plot(important.sf)
-
-g2 <- ggplot() +
+map.gg <- ggplot() +
     geom_sf(data = st_buffer(important.sf, 200), color = alpha("white", 0.2)) +
     geom_sf(data = important.sf, color = "white", size = 0.1) +
     theme_classic() +
@@ -29,5 +27,5 @@ g2 <- ggplot() +
           plot.margin=grid::unit(c(2,2,2,2), "mm")) +
     ggtitle("The electricity transmission lines of GB")
     
-ggsave("Grid_10.jpg", dpi = 1200, g2)
+ggsave("Grid_10.jpg", map.gg, dpi = 'retina')
 

@@ -57,5 +57,3 @@ map.gg <- ggplot(chargers, aes(eastings, northings)) +
   ggtitle("EV chargers: an NCR and OS comparison")
 
 ggsave("Hex_4.jpg", map.gg, dpi = 'retina')
-
-

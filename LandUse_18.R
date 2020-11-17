@@ -63,6 +63,6 @@ map.gg <- ggplot() +
         axis.line.y=element_blank(),
         plot.title = element_text(hjust = 0.5),
         legend.position = "none") +
-  ggtitle('Land in London devoted to parking (source: OSM)')
+  ggtitle('Parking in London (source: OSM)')
 
 ggsave("LandUse_18.jpg", dpi = 'retina', map.gg)

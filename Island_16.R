@@ -15,6 +15,7 @@ Ivo.map <- get_stamenmap(c(left = lon - diff, bottom = lat - diff, right = lon +
 # Map it
 map.gg <- ggmap(Ivo.map) +
   ggtitle("The island of Ivö, Sweden")
-  
+
+
 
 ggsave("Island_16.jpg", map.gg, scale = 2, dpi = 'retina')
